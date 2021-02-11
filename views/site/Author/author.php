@@ -11,8 +11,8 @@ $this->title = 'Author';
 <div class="site-author">
     <button class="btn btn-primary create-author">Create Author</button>
     <form id="AuthorSearchForm" class="form-inline">
-        <label>Find for:</label>
-            <select class="form-control type-author-find">
+        <label for="authorTitle" class="lab">Find for:</label>
+            <select id="authorTitle" class="form-control type-author-find">
                 <option value="first_name">First Name</option>
                 <option value="last_name">Last Name</option>
             </select>

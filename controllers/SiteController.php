@@ -306,12 +306,10 @@ class SiteController extends Controller
     {
         $data = Yii::$app->request->post();
         $books_id = [];
-        $text = explode(' ',$data['text']);
-        $model = Author::find()->where(['and' ,['IN','first_name',$text[0]],['IN','last_name',$text[1]]])->asArray()->one();
         $books = Book::find()->asArray()->all();
         foreach ($books as $book){
             $authors = explode(',',$book['authors_id']);
-            if (in_array($model['id'],$authors)){
+            if (in_array($data['id'],$authors)){
                 $books_id[]=$book['id'];
             }
         }
@@ -323,6 +321,6 @@ class SiteController extends Controller
             ],
         ]);
 
-        return $this->renderPartial('Book/book_grid',['dataProvider'=>$dataProvider,'model' => $model]);
+        return $this->renderPartial('Book/book_grid',['dataProvider'=>$dataProvider]);
     }
 }

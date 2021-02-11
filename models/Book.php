@@ -41,7 +41,6 @@ class Book extends \yii\db\ActiveRecord
             [['imageFile'], 'file', 'extensions' => 'png, jpg','maxSize' => 2*1024*1024],
         ];
     }
-
     /**
      * {@inheritdoc}
      */

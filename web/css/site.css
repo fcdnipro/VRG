@@ -120,8 +120,13 @@ a.desc:after {
 .create-author, .create-book {
     margin-bottom: 10px;
 }
-.select2-search__field{
+.select2-search__field {
     width: 200px !important;
     padding-top: 5px !important;
 
+}
+.lab {
+    float: left;
+    padding-right: 5px;
+    padding-top: 7px;
 }

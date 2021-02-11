@@ -31,11 +31,17 @@ $this->title = 'Book';
     ]);
     ActiveForm::end() ?>
         <form id="AuthorSearchForm" class="form-inline">
-            <label>Find for book title:</label>
-            <input class="form-control col-md-6 text-book-find">
-            <button class="btn btn-primary find-book" >Find Book</button>
-            <button class="btn btn-primary reset-book">Reset all search</button>
+            <div class="form-group col-md-4">
+               <label class='lab' for="bookTitle">Find for book title:</label>
+                <input id="bookTitle" class="form-control col-md-6 text-book-find">
+            </div>
+            <div class="form-group col-md-4">
+                <button class="btn btn-primary find-book" >Find Book</button>
+                <button class="btn btn-primary reset-book">Reset all search</button>
+            </div>
+
         </form>
+    <br>
         <h1><?= Html::encode($this->title) ?></h1>
         <?php Pjax::begin([ 'id' => 'bookGrid']); ?>
         <?= $this->context->renderPartial('Book/book_grid', ['dataProvider' => $dataProvider]) ?>

@@ -197,7 +197,7 @@ $('body').on('click','.create-author-btn',function () {
 })
     .on('change', '#book-author-search-form #book-authors',function (e) {
     let data = new FormData();
-    data.append('text', $('#book-author-search-form #book-authors option:selected').text());
+    data.append('id', $('#book-authors').val());
     findBookAuthor(data);
 })
     .on('click', '.find-author',function (e) {

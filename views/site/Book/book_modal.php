@@ -25,6 +25,7 @@
             'data' => \app\models\Author::getAuthors(),
             'options' => [
                 'placeholder' => 'Select Authors',
+                'value' => !empty($model->id) ? explode(',',$model->authors_id) : $model->authors_id,
                 'multiple' => true,
             ]
         ])?>
