@@ -22,12 +22,12 @@ $this->title = 'Author';
     </form>
     <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin([ 'id' => 'authorGrid']); ?>
-        <?= $this->context->renderPartial('Author/author_grid', ['dataProvider' => $dataProvider]) ?>
+        <?= $this->context->renderPartial('author_grid', ['dataProvider' => $dataProvider]) ?>
     <?php Pjax::end();?>
 </div>
 
     <div id="AuthorModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-            <?= $this->context->renderPartial('Author/author_modal', ['model' => $model]) ?>
+            <?= $this->context->renderPartial('author_modal', ['model' => $model]) ?>
         </div>
     </div>

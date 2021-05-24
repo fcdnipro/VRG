@@ -44,12 +44,12 @@ $this->title = 'Book';
     <br>
         <h1><?= Html::encode($this->title) ?></h1>
         <?php Pjax::begin([ 'id' => 'bookGrid']); ?>
-        <?= $this->context->renderPartial('Book/book_grid', ['dataProvider' => $dataProvider]) ?>
+        <?= $this->context->renderPartial('book_grid', ['dataProvider' => $dataProvider]) ?>
         <?php Pjax::end();?>
 </div>
 
     <div id="BookModal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
-            <?= $this->context->renderPartial('Book/book_modal', ['model' => $model]) ?>
+            <?= $this->context->renderPartial('book_modal', ['model' => $model]) ?>
         </div>
     </div>

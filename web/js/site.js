@@ -1,6 +1,6 @@
 function createAuthor() {
     $.ajax({
-        url:     "site/create-author",
+        url:     "author/create-author",
         type:     "POST",
         dataType: "html",
         data: $("#author-form").serialize(),
@@ -15,7 +15,7 @@ function createAuthor() {
 
 function editAuthor(id) {
     $.ajax({
-        url:     "site/edit-author?id=" + id,
+        url:     "author/edit-author?id=" + id,
         type:     "GET",
         dataType: "html",
         success: function(response) {
@@ -30,7 +30,7 @@ function editAuthor(id) {
 
 function saveAuthor(id) {
     $.ajax({
-        url:     "site/edit-author?id=" + id,
+        url:     "author/edit-author?id=" + id,
         type:     "POST",
         dataType: "html",
         data: $("#author-form").serialize(),
@@ -45,7 +45,7 @@ function saveAuthor(id) {
 
 function findAuthor(data) {
     $.ajax({
-        url:     "site/find-author",
+        url:     "author/find-author",
         type:     "POST",
         processData: false,
         contentType: false,
@@ -62,7 +62,7 @@ function findAuthor(data) {
 
 function refreshModel() {
     $.ajax({
-        url:     "site/refresh-model",
+        url:     "author/refresh-model",
         type:     "POST",
         dataType: "html",
         success: function(response) {
@@ -76,7 +76,7 @@ function refreshModel() {
 
 function createBook() {
     $.ajax({
-        url:     "site/create-book",
+        url:     "book/create-book",
         type:     "POST",
         dataType: "html",
         data: $("#book-form").serialize(),
@@ -91,7 +91,7 @@ function createBook() {
 
 function editBook(id) {
     $.ajax({
-        url:     "site/edit-book?id=" + id,
+        url:     "book/edit-book?id=" + id,
         type:     "GET",
         dataType: "html",
         success: function(response) {
@@ -106,7 +106,7 @@ function editBook(id) {
 
 function saveBook(id) {
     $.ajax({
-        url:     "site/edit-book?id=" + id,
+        url:     "book/edit-book?id=" + id,
         type:     "POST",
         dataType: "html",
         data: $("#book-form").serialize(),
@@ -121,7 +121,7 @@ function saveBook(id) {
 
 function refreshModelBook() {
     $.ajax({
-        url:     "site/refresh-model-book",
+        url:     "book/refresh-model-book",
         type:     "POST",
         dataType: "html",
         success: function(response) {
@@ -135,7 +135,7 @@ function refreshModelBook() {
 
 function findBookAuthor(data) {
     $.ajax({
-        url:     "site/find-book-author",
+        url:     "book/find-book-author",
         type:     "POST",
         processData: false,
         contentType: false,
@@ -152,7 +152,7 @@ function findBookAuthor(data) {
 
 function findBook(data) {
     $.ajax({
-        url:     "site/find-book",
+        url:     "book/find-book",
         type:     "POST",
         processData: false,
         contentType: false,
@@ -169,7 +169,7 @@ function findBook(data) {
 
 function resetSearchBook() {
     $.ajax({
-        url:     "site/reset-search-book",
+        url:     "book/reset-search-book",
         type:     "POST",
         success: function(response) {
             $('#bookGrid').html(response);
